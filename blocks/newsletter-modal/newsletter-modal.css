@@ -1,4 +1,5 @@
 .newsletter-modal-container {
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -7,6 +8,10 @@
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 9999;
     margin-top: 0!important;
+}
+
+.newsletter-modal-container.active {
+    display: block;
 }
 
 .newsletter-modal {

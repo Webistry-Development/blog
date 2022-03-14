@@ -772,6 +772,13 @@ function buildArticleFeed(mainEl, type) {
   mainEl.append(div);
 }
 
+function buildNewsletterModal(mainEl) {
+  const div = document.createElement('div');
+  const $newsletterModal = buildBlock('newsletter-modal', []);
+  div.append($newsletterModal);
+  mainEl.append(div);
+}
+
 function buildTagsBlock(mainEl) {
   const topics = getMetadata('article:tag', true);
   if (taxonomy && topics.length > 0) {
@@ -826,6 +833,7 @@ function buildAutoBlocks(mainEl) {
       }
     }
     buildImageBlocks(mainEl);
+    buildNewsletterModal(mainEl);
   } catch (error) {
     // eslint-disable-next-line no-console
     console.error('Auto Blocking failed', error);

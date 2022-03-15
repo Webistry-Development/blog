@@ -1,0 +1,38 @@
+.newsletter-header {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 54px;
+    background-color: white;
+    font-size: 16px;
+    border-bottom: 1px #EEEEEE solid;
+}
+
+.newsletter-header > div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.newsletter-header img {
+    max-width: 20px;
+    margin-right: 16px;
+}
+
+.newsletter-header strong {
+    margin-right: 6px;
+}
+
+.newsletter-header a, .newsletter-header a:active, .newsletter-header a:visited {
+    margin-left: 20px;
+    background-color: #1473E6;
+    color: white!important;
+    border-radius: 100px;
+    text-decoration: none;
+    padding: 6px 16px;
+    font-size: 14px;
+}

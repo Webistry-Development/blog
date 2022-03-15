@@ -36,7 +36,6 @@ export default async function decorate(block) {
     });
 
     block.addEventListener('click', (e) => {
-        e.preventDefault();
         e.stopPropagation();
     })
 

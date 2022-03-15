@@ -1,0 +1,77 @@
+main .newsletter-container > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 900px;
+}
+
+main .newsletter {
+    width: 100%;
+}
+
+main .newsletter > div {
+    display: flex;
+    flex-direction: column;
+    background-color: #FAFAFA;
+    width: 100%;
+}
+
+main .newsletter > div > div:last-child {
+    padding: 20px 40px;
+}
+
+main .newsletter img {
+    width: 100%;
+    max-height: 200px;
+}
+
+main .newsletter h4 {
+    margin: 0 0 10px 0;
+    font-size: 14px;
+    color: #323232;
+}
+
+main .newsletter h2 {
+    margin: 0 0 10px 0;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+main .newsletter p {
+    font-size: 16px;
+    margin: 0 0 10px 0;
+}
+
+main .newsletter a, .newsletter a:active, .newsletter a:visited {
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #1473E6;
+    color: white!important;
+    border-radius: 100px;
+    text-decoration: none;
+    padding: 6px 16px;
+    font-size: 14px;
+}
+
+@media (min-width: 780px) {
+    main .newsletter > div {
+        flex-direction: row;
+    }
+
+    main .newsletter img {
+        width: 220px;
+        min-width: 220px;
+        height: 100%;
+        max-height: 100%;
+    }
+}
+
+@media (min-width: 860px) {
+    main .newsletter h2 {
+        font-size: 32px;
+    }
+
+    main .newsletter p {
+        font-size: 18px;
+    }
+}

@@ -30,8 +30,26 @@
 }
 
 .newsletter-modal-banner {
+    position: relative;
     width: 100%;
-    transform: translateY(-1px);
+    transform: scale(1.01);
+}
+
+.newsletter-modal-close {
+    display: flex;
+    position: absolute;
+    top: 10px;
+    right: 14px;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+}
+
+.newsletter-modal-close-icon {
+    width: 12px;
+    height: 12px;
 }
 
 .newsletter-modal-text {

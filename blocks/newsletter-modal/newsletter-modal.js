@@ -22,7 +22,10 @@ function bindNewsletterCTAs() {
 
 export default async function decorate(block) {
     const $container = block.closest('.newsletter-modal-container');
-    const $banner = createTag('img', { class: 'newsletter-modal-banner', src: '' });
+    const $bannerContainer = createTag('div', { class: 'newsletter-modal-banner-container' });
+    const $banner = createTag('img', { class: 'newsletter-modal-banner', src: '/blocks/newsletter-modal/banner-header.svg' });
+    const $close = createTag('a', { class: 'newsletter-modal-close' });
+    const $closeIcon = createTag('img', { class: 'newsletter-modal-close-icon', src: '/blocks/newsletter-modal/close.svg' });
     const $text = createTag('p', { class: 'newsletter-modal-text' });
     const $emailLabel = createTag('label', { class: 'newsletter-modal-email-label', for: 'newsletter_email' });
     const $emailText = createTag('span', { class: 'newsletter-modal-email-text' });
@@ -30,6 +33,10 @@ export default async function decorate(block) {
     const $cta = createTag('input', { type: 'submit', class: 'newsletter-modal-cta'});
     const $disclaimer = createTag('p', { class: 'newsletter-modal-disclaimer' });
 
+    $close.addEventListener('click', (e) => {
+        e.preventDefault();
+        $container.classList.remove('active');
+    });
     $container.addEventListener('click', (e) => {
         e.preventDefault();
         $container.classList.remove('active');
@@ -39,8 +46,10 @@ export default async function decorate(block) {
         e.stopPropagation();
     })
 
-    $banner.src = '/blocks/newsletter-modal/banner-header.svg';
-    block.append($banner);
+    $bannerContainer.append($banner);
+    $bannerContainer.append($close);
+    $close.append($closeIcon);
+    block.append($bannerContainer);
 
     $text.innerText = 'Sign up for the Adobe Blog Newsletter and get access to creative news, product launches, and more — delivered to your inbox weekly.';
     block.append($text);

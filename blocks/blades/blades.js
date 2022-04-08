@@ -16,7 +16,14 @@ export default function decorate($block) {
     $columns[0].append($image);
     $columns[0].classList.add('blades-image');
     $columns[1].classList.add('blades-content');
-    $columns[1].querySelector('h2').append($icon);
+
+    const $cta = $columns[1].querySelector('a');
+
+    if ($cta) {
+      $cta.classList.add('button', 'small');
+    } else {
+      $columns[1].querySelector('h2').append($icon);
+    }
 
     $link.append($row);
     $block.append($link);

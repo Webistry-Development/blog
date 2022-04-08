@@ -44,7 +44,12 @@ main .blades p {
     color: #4D4D4D;
 }
 
+main .blades .blades-content a.button {
+    margin: 0;
+}
+
 main .blades .blades-image img {
     max-width: 100px;
     display: block;
+    height: 100%;
 }

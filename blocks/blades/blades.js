@@ -21,11 +21,11 @@ export default function decorate($block) {
 
     if ($cta) {
       $cta.classList.add('button', 'small');
+      $block.append($row);
     } else {
       $columns[1].querySelector('h2').append($icon);
+      $link.append($row);
+      $block.append($link);
     }
-
-    $link.append($row);
-    $block.append($link);
   });
 }

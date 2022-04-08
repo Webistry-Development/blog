@@ -1,0 +1,50 @@
+main .blades {
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px;
+}
+
+main .blades .blades-row {
+    display: flex;
+    border: 1px solid #EAEAEA;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+main .blades a {
+    text-decoration: none;
+}
+
+main .blades h2 {
+    display: flex;
+    margin: 0 0 10px 0;
+    color: #4D4D4D;
+    font-size: 16px;
+    line-height: 20px;
+    align-items: center;
+}
+
+main .blades .blades-content {
+    width: 100%;
+    margin: 15px 15px 5px 15px;
+}
+
+main .blades h2 img {
+    width: 18px;
+    margin-left: 10px;
+}
+
+main .blades p {
+    margin: 0;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #4D4D4D;
+}
+
+main .blades .blades-image img {
+    max-width: 100px;
+    display: block;
+}

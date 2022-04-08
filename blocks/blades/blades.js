@@ -8,7 +8,7 @@ export default function decorate($block) {
     const $image = $columns[0].querySelector('img');
     const link = $columns[0].querySelector('a').href;
     const $icon = createTag('img', { src: '/blocks/blades/link-icon.svg' });
-    const $link = createTag('a', { href: link, target: '_blank', rel: 'noopener' });
+    const $link = createTag('a', { href: link, target: '_blank' });
 
     $row.classList.add('blades-row');
 
@@ -21,6 +21,7 @@ export default function decorate($block) {
 
     if ($cta) {
       $cta.classList.add('button', 'small');
+      $cta.target = '_blank';
       $block.append($row);
     } else {
       $columns[1].querySelector('h2').append($icon);

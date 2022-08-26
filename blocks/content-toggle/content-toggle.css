@@ -1,0 +1,29 @@
+main .content-toggle-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+main .content-toggle-container {
+    border-bottom: 1px lightgray solid;
+}
+
+main .content-toggle button {
+    list-style-type: none;
+    background-color: transparent;
+    padding: 14px 22px;
+    font-size: 14px;
+    font-weight: 600;
+    margin: 0 5px;
+    cursor: pointer;
+    user-select: none;
+    border: none;
+    font-family: var(--body-font-family);
+    transform: translateY(1px);
+}
+
+main .content-toggle button.active {
+    background-color: white;
+    border-top: 1px lightgray solid;
+    border-left: 1px lightgray solid;
+    border-right: 1px lightgray solid;
+}

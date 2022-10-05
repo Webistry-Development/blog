@@ -1,6 +1,7 @@
 .hlx/*
 logs/*
 node_modules/*
+.idea/*
 
 # OS Files
 .DS_Store

@@ -702,19 +702,13 @@ function buildArticleHeader(mainEl) {
 
 function buildTagHeader(mainEl) {
   const div = mainEl.querySelector('div');
-
-  if (div) {
-    const heading = div.querySelector('h1, h2');
-    const picture = div.querySelector('picture');
-
-    if (picture) {
-      const tagHeaderBlockEl = buildBlock('tag-header', [
-        [heading],
-        [{ elems: [picture.closest('p')] }],
-      ]);
-      div.prepend(tagHeaderBlockEl);
-    }
-  }
+  const heading = mainEl.querySelector('h1, h2');
+  const picture = mainEl.querySelector('picture');
+  const tagHeaderBlockEl = buildBlock('tag-header', [
+    [heading],
+    [{ elems: [picture.closest('p')] }],
+  ]);
+  div.prepend(tagHeaderBlockEl);
 }
 
 function buildAuthorHeader(mainEl) {

@@ -324,6 +324,10 @@ main .section-wrapper .marquee-wrapper {
 }
 
 @media screen and (min-width: 600px) {
+    main .section-wrapper .marquee-wrapper {
+        max-width: none;
+        padding: 0 2rem;
+    }
 
     .marquee .background .mobileOnly,
     .marquee .background .desktopOnly {
